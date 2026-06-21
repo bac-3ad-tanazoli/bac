@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+	<title>العد التنازلي لاعلان نتائج البكالوريا 2026</title>
+</head>
+<body>
+	<div class="uper">
+		<p>العد التنازلي لموعد اعلان نتائج شهادة البكالوريا دورة 2026</p> <br>
+	</div>
+<div class="cont">
+	<img src="skull.gif" class="skull">
+
+	<div class="div">
+		<div class="days"><div class="div2"> <h2 class="test">days</h2> <p id="days"></p> </div></div>
+		<div class="days"><div class="div2"> <h2>hours</h2> <p id="hours"></p></div></div>
+		<div class="days"><div class="div2"> <h2>minutes</h2> <p id="min"></p></div></div>
+		<div class="days"><div class="div2"> <h2>seconds</h2> <p id="sec"></p></div></div>
+	</div>
+</div>
+<div class="dwn">
+	<p>المتوقع 12 جويلية 2026</p>
+</div>
+
+
+<p class="end">by ghilas</p>
+	<script>
+	let fin = new Date('2026-07-12T10:00:00.00');
+	let now = new Date();
+	tleft = fin-now;
+function printthe() {
+
+	now = new Date();
+	tleft = fin-now;
+
+	let daysleft = Math.trunc(tleft/1000/60/60/24);
+	let hoursleft = Math.trunc(tleft/1000/60/60) - Math.trunc(Math.trunc(tleft/1000/60/60)/24)*24;
+	let minleft = Math.trunc(tleft/1000/60) - Math.trunc(Math.trunc(tleft/1000/60)/60)*60;
+	let secleft = Math.trunc(tleft/1000)- Math.trunc(Math.trunc(tleft/1000)/60)*60;
+
+	document.getElementById('days').innerText = daysleft ;
+	document.getElementById('hours').innerText = hoursleft;
+	document.getElementById('min').innerText = minleft ;
+	document.getElementById('sec').innerText = secleft ;
+		if (tleft < 2) {
+	clearInterval(repeat);
+	document.getElementById('day').innerText = null ;
+	document.getElementById('hour').innerText = null ;
+	document.getElementById('min').innerText = null ;
+	document.getElementById('sec').innerText = null ;
+	document.getElementById('h').innerText = "" ;
+}
+
+
+}
+const repeat = setInterval(printthe,1000);
+</script>
+<style type="text/css"> 
+	
+@import url('https://fonts.cdnfonts.com/css/horror-type');
+
+
+body{
+	background:black;
+  min-height: 100vh;
+	width: 100vw;
+	justify-content: center;
+	position: relative;
+}
+.end {
+	position: absolute;
+	font-size: 10px ;
+	color: white;
+	bottom: 0;
+	right: 0;
+	text-align: right;
+	width: 100%;
+}
+.uper {
+	width: 100vw;
+	height: 250px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.uper p {
+  font-family: "El Messiri", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  color: white;
+  text-align: center;
+  font-size: 50px
+
+}
+
+.dwn {
+	width: 100vw;
+	height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.dwn p {
+  color: white;
+  text-align: center;
+  font-size: 30px;
+
+}
+
+
+
+
+.cont {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 550px;
+
+}
+.skull{
+	height: 400px;
+	position: absolute;
+	z-index: -1 ;
+}
+
+.div {
+	background: rgba(255,255,255,0.1);
+	border-radius: 30vh;
+	width: 80vw;
+	height: 250px;
+	display: flex;
+	justify-content: space-between;
+	padding: 10px;
+	align-items: center;
+}
+
+.days{
+		backdrop-filter: blur(2px);
+		background: rgba(255,255,255,0.3);
+		border-radius: 50%;
+		height: 235px;
+		width: 235px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+}
+.days:hover {
+	backdrop-filter: blur(5px);
+	background: rgba(255,0,0,0.4);
+	transition: background-color 0.2s ease-in-out;
+
+}
+h2 {
+    font-family: "Creepster", system-ui;
+    font-weight: 400;
+    font-style: normal;                                       
+	font-size: 40px;
+	color: black;
+	margin: 0;
+}
+.cont p {
+	font-family: "Creepster", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.div2{
+	width: 200px;
+	height: 200px;
+	display: inline-grid;
+	justify-content: center;
+	align-items: center;
+}
+
+@media (max-width: 1000px){
+	.dwn {
+		height: 11.1vh;
+	}
+	.uper {
+		height: 27.7vh;
+	}
+	.div {
+	width: 90vw;
+	height: 200px;
+	padding: 10px;
+	}
+	.days {
+		height: 190px;
+		width: 190px;
+	}
+	h2 {
+    font-family: "Creepster", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;                                       
+	font-size: 20px;
+	align-items: center;
+	justify-content: center;
+	color: black;
+	margin: 0;
+	margin-top: 20px;
+	}
+	.cont {
+		height: 61vh;
+	}
+	.cont p {
+	text-align: center;
+	font-family: "Creepster", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 55px;
+    margin: 0;
+    margin-bottom: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	}
+}
+
+
+
+</style>
+</body>
+</html>
